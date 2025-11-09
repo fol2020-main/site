@@ -1,0 +1,221 @@
+ <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <title>FIRST OCEAN LINERS</title>
+  <style>
+    /* Общие стили */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #000, #D4AF37);
+      background-image: url('./bg.jpg');
+      color: #000;
+      font-family: 'Montserrat', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      text-align: center;
+      overflow-x: hidden;
+      position: relative;
+      background-attachment: fixed;
+
+      /* Анимированный черно-жёлтый градиент */
+      /* background: linear-gradient(135deg, #000, #D4AF37);
+      background-size: 400% 400%;
+      animation: blackGoldShift 20s ease infinite; */
+    }
+
+    @keyframes blackGoldShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Логотип */
+    .logo {
+      width: 80%;
+      max-width: 400px;
+      height: auto;
+      margin: 20px auto 40px;
+      fill: #D4AF37;
+      transition: all 0.5s ease;
+      filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.5));
+    }
+    h1 {
+      font-size:70px;
+      color: #bd9740;
+    }
+
+    .logo:hover {
+      transform: translateY(-5px) scale(1.03);
+      filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.8));
+    }
+
+    img {
+      height: 600px;
+    }
+
+    /* Кнопки — оставляем без изменений */
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px 0 40px;
+    }
+
+    .btn {
+      background: linear-gradient(135deg, #bd9740 0%, #bd9740 50%, #bd9740 100%);
+      color: #000!important;
+      border: 1px solid #000;
+      padding: 14px 28px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      font-size: 16px;
+      min-width: 130px;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+      transform: rotate(45deg);
+      transition: all 0.6s ease;
+      z-index: -1;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(135deg, #C5A02E 0%, #FFD700 50%, #C5A02E 100%);
+    }
+
+    .btn:hover::before {
+      top: 0;
+      left: 0;
+      transform: rotate(45deg) translateX(-50%) translateY(-50%);
+    }
+
+    /* Копирайт */
+    .copyright {
+      position: absolute;
+      bottom: 20px;
+      font-size: 13px;
+      color: #FFE699;
+      opacity: 0.9;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .copyright svg {
+      width: 16px;
+      height: 16px;
+      fill: #FFE699;
+    }
+
+    /* Адаптивность */
+    @media (max-width: 768px) {
+      .logo {
+        width: 90%;
+        max-width: 300px;
+      }
+
+      .btn {
+        padding: 12px 20px;
+        font-size: 14px;
+        min-width: 90%;
+        width: 90%;
+      }
+          h1 {
+      font-size:40px;
+      color: #bd9740;
+    }
+
+
+
+    img {
+      height: 300px;
+    }
+    }
+
+    @media (max-width: 480px) {
+      .buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 90%;
+        margin: 0 auto;
+      }
+
+      .copyright {
+        font-size: 12px;
+        bottom: 15px;
+        flex-direction: column;
+        gap: 4px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+
+    
+    <h1 id="nid">FIRST OCEAN LINERS</h1>
+
+    <img src="liner1.png">
+
+ 
+  <!-- Кнопки -->
+  <div class="buttons">
+    <a href="https://t.me/firstoceanliners2020" class="btn"><i class="fas fa-person"></i> OPERATOR</a>
+    <a href="https://t.me/fol2020bot" class="btn"><i class="fas fa-robot"></i>  BOT 1</a>
+    <a href="https://t.me/frst01bot" class="btn"><i class="fas fa-robot"></i> BOT 2</a>
+    <a href="https://t.me/Fol20203bot" class="btn"><i class="fas fa-robot"></i> BOT 3</a>
+    <a href="https://t.me/+LKMDx2EXkFdhY2U0" class="btn"><i class="fas fa-newspaper"></i> CHANNEL</a>
+  </div>
+
+  <!-- Копирайт -->
+  <div class="copyright">
+
+    FIRST OCEAN LINERS © Operating since 2020, we guarantee the highest quality and fast delivery.
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/circletype@2.1.0/dist/circletype.min.js"></script>
+<script>
+  new CircleType(document.getElementById('nid')).radius(500).dir(1);
+</script>
+
+</body>
+</html>
+
